@@ -1,0 +1,4963 @@
+/* =====================================================
+   PHYSIM
+   Physics Simulation, Calculation & Learning
+   Main Style
+   ===================================================== */
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5fbff;
+    color: #17324d;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #dceef7;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 16px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    color: #087ea4;
+    text-decoration: none;
+
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.logo:hover {
+    color: #056b8c;
+}
+
+
+/* NAVIGATION */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #31485c;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #0794c5;
+}
+
+
+/* MOBILE MENU BUTTON */
+
+.menu-toggle {
+    display: none;
+
+    border: none;
+    background: #e4f7ff;
+
+    color: #087ea4;
+
+    font-size: 22px;
+
+    padding: 7px 12px;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            #c9f0ff,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #eaf9ff,
+            #f8fcff
+        );
+
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+
+/* SUBTITLE */
+
+.hero-subtitle {
+    color: #0794c5;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+/* MAIN TITLE */
+
+.hero h1 {
+    color: #12304a;
+
+    font-size: 60px;
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+
+/* DESCRIPTION */
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+
+    color: #5b7183;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   BUTTONS
+   ========================= */
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 35px;
+
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+/* PRIMARY BUTTON */
+
+.btn-primary {
+    background: #0794c5;
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(7, 148, 197, 0.20);
+}
+
+.btn-primary:hover {
+    background: #067da8;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(7, 148, 197, 0.25);
+}
+
+
+/* SECONDARY BUTTON */
+
+.btn-secondary {
+    background: white;
+
+    color: #087ea4;
+
+    border: 2px solid #0794c5;
+}
+
+.btn-secondary:hover {
+    background: #e8f8ff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   FORMULA DISPLAY
+   ========================= */
+
+.formulas {
+    margin-top: 45px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.formula {
+    background: rgba(255, 255, 255, 0.9);
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    color: #24506b;
+
+    font-weight: 700;
+
+    border: 1px solid #dceef7;
+
+    box-shadow:
+        0 5px 20px rgba(50, 100, 130, 0.07);
+}
+
+
+/* =========================
+   GENERAL SECTION
+   ========================= */
+
+.section {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 85px 30px;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    color: #12304a;
+
+    font-size: 36px;
+
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #657789;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   FEATURE CARDS
+   ========================= */
+
+.card-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e0eef7;
+
+    box-shadow:
+        0 10px 30px
+        rgba(40, 100, 130, 0.08);
+
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(40, 100, 130, 0.14);
+}
+
+.card-icon {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #12304a;
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #68798a;
+
+    margin-bottom: 18px;
+}
+
+
+/* CARD LINK */
+
+.card a {
+    color: #0785b2;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #056b8c;
+}
+
+
+/* =========================
+   TOPIC SECTION
+   ========================= */
+
+.topic-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.topic-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border-left: 5px solid #0794c5;
+
+    border-top: 1px solid #e2eff6;
+    border-right: 1px solid #e2eff6;
+    border-bottom: 1px solid #e2eff6;
+
+    box-shadow:
+        0 7px 20px
+        rgba(40, 100, 130, 0.07);
+
+    transition: 0.3s;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+
+    border-left-color: #056b8c;
+}
+
+.topic-card h3 {
+    color: #087ea4;
+
+    margin-bottom: 8px;
+}
+
+.topic-card p {
+    color: #6c7d8c;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   CALL TO ACTION
+   ========================= */
+
+.cta {
+    max-width: 1000px;
+
+    margin: 30px auto 80px;
+
+    padding: 60px 30px;
+
+    text-align: center;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dff6ff,
+            #edfaff
+        );
+
+    border: 1px solid #cdebf7;
+}
+
+.cta h2 {
+    color: #12304a;
+
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+.cta p {
+    color: #5d7182;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background: #12304a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+footer h3 {
+    margin-bottom: 8px;
+}
+
+footer p {
+    opacity: 0.75;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   PAGE HEADER
+   Digunakan untuk Calculator,
+   Simulation, Notes, About
+   ========================= */
+
+.page-header {
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e5f7ff,
+            #f7fcff
+        );
+}
+
+.page-header h1 {
+    color: #12304a;
+
+    font-size: 42px;
+
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    color: #637789;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+/* =========================
+   CALCULATOR
+   ========================= */
+
+.calculator-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 30px;
+}
+
+.calculator-box {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    border: 1px solid #dceef7;
+
+    box-shadow:
+        0 10px 30px
+        rgba(40, 100, 130, 0.08);
+}
+
+
+/* TOPIC BUTTONS */
+
+.topic-buttons {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+}
+
+.topic-buttons button {
+    padding: 10px 18px;
+
+    border: 1px solid #bfe4f2;
+
+    border-radius: 8px;
+
+    background: #effaff;
+
+    color: #087ea4;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.topic-buttons button:hover {
+    background: #0794c5;
+
+    color: white;
+}
+
+
+/* INPUT */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    color: #34495e;
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #cfe4ee;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #0794c5;
+
+    box-shadow:
+        0 0 0 3px rgba(7, 148, 197, 0.10);
+}
+
+
+/* RESULT */
+
+.result-box {
+    margin-top: 25px;
+
+    background: #effaff;
+
+    border: 1px solid #ccebf7;
+
+    border-radius: 15px;
+
+    padding: 25px;
+}
+
+.result-box h3 {
+    color: #087ea4;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   SIMULATION
+   ========================= */
+
+.simulation-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 60px 30px;
+}
+
+.simulation-box {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    border: 1px solid #dceef7;
+
+    box-shadow:
+        0 10px 30px
+        rgba(40, 100, 130, 0.08);
+}
+
+.simulation-tabs {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+    flex-wrap: wrap;
+}
+
+.simulation-tabs button {
+    padding: 11px 20px;
+
+    background: #effaff;
+
+    border: 1px solid #bfe4f2;
+
+    color: #087ea4;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* CANVAS */
+
+#simulationCanvas {
+    width: 100%;
+
+    max-width: 900px;
+
+    display: block;
+
+    margin: 30px auto;
+
+    background: #f4fbff;
+
+    border: 1px solid #cfeaf5;
+
+    border-radius: 15px;
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    margin-top: 25px;
+
+    background: white;
+}
+
+th {
+    background: #0794c5;
+
+    color: white;
+
+    padding: 12px;
+}
+
+td {
+    padding: 11px;
+
+    border-bottom: 1px solid #e4eef3;
+
+    text-align: center;
+}
+
+tr:hover {
+    background: #f1fbff;
+}
+
+
+/* =========================
+   NOTES
+   ========================= */
+
+.notes-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 30px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.note-card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #dceef7;
+
+    box-shadow:
+        0 8px 25px
+        rgba(40, 100, 130, 0.07);
+}
+
+.note-card h2 {
+    color: #087ea4;
+
+    margin-bottom: 12px;
+}
+
+.note-card p {
+    color: #627586;
+}
+
+.note-formula {
+    margin-top: 15px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    background: #effaff;
+
+    color: #087ea4;
+
+    font-weight: bold;
+
+    text-align: center;
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about-container {
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 70px 30px;
+}
+
+.about-box {
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    border: 1px solid #dceef7;
+
+    box-shadow:
+        0 10px 30px
+        rgba(40, 100, 130, 0.08);
+}
+
+.about-box h2 {
+    color: #087ea4;
+
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    color: #617384;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px) {
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .topic-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        padding: 15px 20px;
+    }
+
+    .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        background: white;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+        padding: 20px 25px;
+
+        box-shadow:
+            0 10px 20px
+            rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        min-height: 550px;
+
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .notes-grid {
+        grid-template-columns: 1fr;
+
+        padding: 50px 20px;
+    }
+
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+    .calculator-container,
+    .simulation-container {
+        padding: 40px 20px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .formulas {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .formula {
+        text-align: center;
+    }
+}
+/* ========================================
+   CALCULATION TABLE
+======================================== */
+
+.data-table-card {
+    margin-top: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.data-table-card h2 {
+    margin-bottom: 20px;
+    color: #12395b;
+}
+
+.data-table-card table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table-card th {
+    background: #12395b;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+.data-table-card td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-table-card tr:nth-child(even) {
+    background: #f4f9fc;
+}
+
+.data-table-card tr:hover {
+    background: #e5f3ff;
+}
+/* ========================================
+   PHYSICS GRAPH
+======================================== */
+
+.graph-card {
+    margin-top: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.graph-card h2 {
+    color: #12395b;
+    margin-bottom: 20px;
+}
+
+.graph-placeholder {
+    width: 100%;
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#physicsGraph {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   KINEMALAB
+   Explore Motion. Calculate. Simulate.
+   Dark Navy / Electric Blue Theme
+   ===================================================== */
+
+
+/* =========================
+   COLOR SYSTEM
+   ========================= */
+
+:root {
+    --navy-dark: #06142f;
+    --navy: #081d42;
+    --navy-secondary: #0b2552;
+
+    --electric-blue: #1677ff;
+    --blue: #2494ff;
+    --cyan: #00d9ff;
+    --light-blue: #8fd3ff;
+
+    --text-primary: #f4f8ff;
+    --text-secondary: #c7d8ee;
+    --text-muted: #8fa8c7;
+
+    --border-blue: rgba(36, 148, 255, 0.35);
+
+    --glow-blue:
+        0 0 20px rgba(22, 119, 255, 0.25);
+
+    --glow-cyan:
+        0 0 25px rgba(0, 217, 255, 0.25);
+}
+
+
+/* =========================
+   GLOBAL
+   ========================= */
+
+body {
+    background: var(--navy-dark);
+    color: var(--text-primary);
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    background: rgba(6, 20, 47, 0.94);
+    border-bottom: 1px solid rgba(36, 148, 255, 0.3);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.logo {
+    color: var(--text-primary);
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 0 12px rgba(0, 217, 255, 0.25);
+}
+
+.logo:hover {
+    color: var(--cyan);
+}
+
+.nav-menu a {
+    color: var(--text-secondary);
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--cyan);
+}
+
+
+/* MOBILE MENU */
+
+.menu-toggle {
+    background: var(--navy-secondary);
+    color: var(--cyan);
+
+    border: 1px solid var(--border-blue);
+
+    box-shadow: var(--glow-blue);
+}
+
+@media (max-width: 768px) {
+
+    .nav-menu {
+        background: var(--navy);
+        border-top: 1px solid var(--border-blue);
+
+        box-shadow:
+            0 15px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .nav-menu a {
+        color: var(--text-secondary);
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        color: var(--cyan);
+    }
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: left;
+
+    padding: 80px 8%;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(0, 217, 255, 0.14),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(22, 119, 255, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #06142f,
+            #081d42 55%,
+            #061735
+        );
+}
+
+
+/* subtle grid */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(36, 148, 255, 0.05) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(36, 148, 255, 0.05) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    pointer-events: none;
+}
+
+
+/* HERO CONTENT */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 600px;
+}
+
+
+/* HERO LABEL */
+
+.hero-label {
+    display: inline-block;
+
+    color: var(--cyan);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+
+    padding: 7px 15px;
+
+    border: 1px solid var(--electric-blue);
+
+    border-radius: 30px;
+
+    background:
+        rgba(22, 119, 255, 0.08);
+
+    box-shadow:
+        0 0 15px rgba(0, 217, 255, 0.12);
+}
+
+
+/* HERO TITLE */
+
+.hero h1 {
+    color: var(--text-primary);
+
+    font-size: clamp(48px, 7vw, 76px);
+
+    font-weight: 900;
+
+    line-height: 0.95;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: block;
+
+    color: var(--cyan);
+
+    text-shadow:
+        0 0 25px rgba(0, 217, 255, 0.28);
+}
+
+
+/* HERO DESCRIPTION */
+
+.hero .hero-description {
+    max-width: 560px;
+
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   HERO BUTTONS
+   ========================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    margin-top: 32px;
+
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    padding: 13px 25px;
+
+    border-radius: 10px;
+}
+
+
+/* PRIMARY */
+
+.hero-buttons .btn-primary {
+    background:
+        linear-gradient(
+            135deg,
+            var(--electric-blue),
+            var(--cyan)
+        );
+
+    color: #ffffff;
+
+    border: none;
+
+    box-shadow:
+        0 8px 25px rgba(22, 119, 255, 0.35);
+}
+
+.hero-buttons .btn-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 217, 255, 0.35);
+}
+
+
+/* SECONDARY */
+
+.hero-buttons .btn-secondary {
+    background: rgba(8, 29, 66, 0.7);
+
+    color: var(--cyan);
+
+    border: 1px solid var(--electric-blue);
+}
+
+.hero-buttons .btn-secondary:hover {
+    background: rgba(22, 119, 255, 0.12);
+
+    color: white;
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--glow-blue);
+}
+
+
+/* =========================
+   HERO VISUAL
+   ========================= */
+
+.hero-visual {
+    position: relative;
+
+    width: 45%;
+    min-height: 400px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* CENTRAL SYMBOL */
+
+.atom {
+    font-size: 150px;
+
+    color: var(--cyan);
+
+    opacity: 0.9;
+
+    text-shadow:
+        0 0 20px rgba(0, 217, 255, 0.45),
+        0 0 60px rgba(22, 119, 255, 0.3);
+
+    animation: kinemalabPulse 4s ease-in-out infinite;
+}
+
+
+/* FORMULAS */
+
+.physics-symbol {
+    position: absolute;
+
+    color: var(--light-blue);
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    font-family:
+        "Times New Roman",
+        serif;
+
+    text-shadow:
+        0 0 12px rgba(0, 217, 255, 0.4);
+}
+
+.symbol-1 {
+    top: 20%;
+    left: 5%;
+}
+
+.symbol-2 {
+    top: 10%;
+    right: 5%;
+}
+
+.symbol-3 {
+    bottom: 15%;
+    right: 8%;
+}
+
+
+/* GLOW ORBIT */
+
+.hero-visual::before {
+    content: "";
+
+    position: absolute;
+
+    width: 330px;
+    height: 330px;
+
+    border: 1px solid
+        rgba(0, 217, 255, 0.35);
+
+    border-radius: 50%;
+
+    transform:
+        rotate(-25deg)
+        scaleX(1.5);
+
+    box-shadow:
+        0 0 30px rgba(0, 217, 255, 0.12);
+
+    animation:
+        kinemalabOrbit 8s linear infinite;
+}
+
+
+/* =========================
+   ANIMATION
+   ========================= */
+
+@keyframes kinemalabPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+
+        opacity: 0.75;
+    }
+
+    50% {
+        transform: scale(1.08);
+
+        opacity: 1;
+    }
+}
+
+@keyframes kinemalabOrbit {
+
+    from {
+        transform:
+            rotate(-25deg)
+            scaleX(1.5);
+    }
+
+    to {
+        transform:
+            rotate(335deg)
+            scaleX(1.5);
+    }
+}
+
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.features,
+.categories {
+    background:
+        linear-gradient(
+            180deg,
+            var(--navy),
+            var(--navy-secondary)
+        );
+
+    padding: 80px 7%;
+}
+
+
+.section-title p {
+    color: var(--cyan);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    color: var(--text-primary);
+
+    font-size: 36px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   FEATURE GRID
+   ========================= */
+
+.feature-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.feature-card {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(11, 37, 82, 0.95),
+            rgba(6, 20, 47, 0.95)
+        );
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    border: 1px solid
+        rgba(36, 148, 255, 0.35);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+
+    border-color: var(--cyan);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 217, 255, 0.12);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #1257b8,
+            #07306d
+        );
+
+    border: 1px solid
+        rgba(0, 217, 255, 0.4);
+
+    font-size: 28px;
+
+    box-shadow:
+        0 0 20px
+        rgba(0, 217, 255, 0.12);
+}
+
+.feature-card h3 {
+    color: var(--text-primary);
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.feature-card a {
+    color: var(--cyan);
+
+    text-decoration: none;
+
+    font-weight: 700;
+}
+
+.feature-card a:hover {
+    color: white;
+}
+
+
+/* =========================
+   MOTION TOPICS
+   ========================= */
+
+.category-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+.category-card {
+    background:
+        linear-gradient(
+            145deg,
+            #0b2552,
+            #071a3d
+        );
+
+    padding: 24px 18px;
+
+    border-radius: 14px;
+
+    border: 1px solid
+        rgba(36, 148, 255, 0.35);
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+    min-height: 175px;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+
+    border-color: var(--cyan);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 217, 255, 0.12);
+}
+
+.category-card span {
+    display: block;
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    color: var(--text-primary);
+
+    font-size: 17px;
+
+    margin-bottom: 7px;
+}
+
+.category-card p {
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CTA
+   ========================= */
+
+.cta {
+    max-width: 1100px;
+
+    margin: 50px auto 80px;
+
+    padding: 45px 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    text-align: left;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b2552,
+            #07306d
+        );
+
+    border: 1px solid
+        rgba(0, 217, 255, 0.45);
+
+    box-shadow:
+        0 10px 40px
+        rgba(0, 0, 0, 0.2);
+}
+
+.cta h2 {
+    color: var(--text-primary);
+
+    font-size: 30px;
+}
+
+.cta p {
+    color: var(--text-secondary);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer,
+footer {
+    background:
+        #041027;
+
+    color: var(--text-secondary);
+
+    border-top: 1px solid
+        rgba(36, 148, 255, 0.25);
+}
+
+.footer-logo {
+    color: var(--text-primary);
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: var(--text-muted);
+}
+
+
+/* =========================
+   PAGE HEADER
+   ========================= */
+
+.page-header {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(0, 217, 255, 0.12),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #06142f,
+            #0b2552
+        );
+
+    border-bottom: 1px solid
+        rgba(36, 148, 255, 0.25);
+}
+
+.page-header h1 {
+    color: var(--text-primary);
+}
+
+.page-header p,
+.page-header span {
+    color: var(--text-secondary);
+}
+
+
+/* =========================
+   CALCULATOR / SIMULATION /
+   NOTES / ABOUT CARDS
+   ========================= */
+
+.calculator-card,
+.result-card,
+.data-table-card,
+.graph-card,
+.simulation-box,
+.about-box,
+.note-card {
+    background:
+        linear-gradient(
+            145deg,
+            #0b2552,
+            #071a3d
+        );
+
+    color: var(--text-primary);
+
+    border: 1px solid
+        rgba(36, 148, 255, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+/* CARD HEADINGS */
+
+.calculator-card h2,
+.result-card h2,
+.data-table-card h2,
+.graph-card h2,
+.note-card h2,
+.about-box h2 {
+    color: var(--text-primary);
+}
+
+
+/* DESCRIPTIONS */
+
+.calculator-card p,
+.result-card p,
+.note-card p,
+.about-box p {
+    color: var(--text-secondary);
+}
+
+
+/* =========================
+   CALCULATOR TOPIC BUTTONS
+   ========================= */
+
+.calculator-topics {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+}
+
+.topic-button {
+    padding: 10px 16px;
+
+    background: var(--navy-secondary);
+
+    color: var(--text-secondary);
+
+    border: 1px solid
+        rgba(36, 148, 255, 0.35);
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.topic-button:hover,
+.topic-button.active {
+    background:
+        linear-gradient(
+            135deg,
+            var(--electric-blue),
+            #0753c7
+        );
+
+    color: white;
+
+    border-color: var(--cyan);
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 217, 255, 0.15);
+}
+
+
+/* =========================
+   INPUT
+   ========================= */
+
+.input-group label {
+    color: var(--text-secondary);
+}
+
+.input-group input,
+.input-group select {
+    background: #06142f;
+
+    color: var(--text-primary);
+
+    border: 1px solid
+        rgba(36, 148, 255, 0.35);
+}
+
+.input-group input::placeholder {
+    color: #6681a4;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: var(--cyan);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0, 217, 255, 0.12);
+}
+
+
+/* =========================
+   FORMULA
+   ========================= */
+
+.formula-box,
+.note-formula,
+.result-box {
+    background:
+        rgba(22, 119, 255, 0.08);
+
+    border: 1px solid
+        rgba(0, 217, 255, 0.25);
+
+    color: var(--light-blue);
+}
+
+.formula-box p {
+    color: var(--cyan);
+}
+
+
+/* =========================
+   TABLE
+   ========================= */
+
+.data-table-card table {
+    background: transparent;
+}
+
+.data-table-card th {
+    background:
+        linear-gradient(
+            135deg,
+            #1257b8,
+            #07306d
+        );
+
+    color: white;
+}
+
+.data-table-card td {
+    color: var(--text-secondary);
+
+    border-bottom:
+        1px solid
+        rgba(36, 148, 255, 0.15);
+}
+
+.data-table-card tr:nth-child(even) {
+    background:
+        rgba(36, 148, 255, 0.05);
+}
+
+.data-table-card tr:hover {
+    background:
+        rgba(0, 217, 255, 0.08);
+}
+
+
+/* =========================
+   GRAPH
+   ========================= */
+
+.graph-placeholder {
+    color: var(--text-muted);
+}
+
+#physicsGraph {
+    background: #06142f;
+
+    border: 1px solid
+        rgba(36, 148, 255, 0.3);
+}
+
+
+/* =========================
+   SIMULATION CANVAS
+   ========================= */
+
+#simulationCanvas {
+    background: #06142f;
+
+    border: 1px solid
+        rgba(36, 148, 255, 0.35);
+
+    box-shadow:
+        0 0 25px
+        rgba(22, 119, 255, 0.08);
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .hero-visual {
+        width: 42%;
+    }
+
+    .category-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+
+        padding: 70px 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    .hero .hero-description {
+        margin: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 100%;
+
+        min-height: 280px;
+
+        margin-top: 30px;
+    }
+
+    .atom {
+        font-size: 110px;
+    }
+
+    .physics-symbol {
+        font-size: 17px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .cta {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 55px 20px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-label {
+        font-size: 10px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .hero-visual {
+        min-height: 230px;
+    }
+
+    .atom {
+        font-size: 90px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features,
+    .categories {
+        padding: 60px 20px;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+    .cta {
+        padding: 35px 25px;
+    }
+}
+
+
+/* =====================================================
+   KINEMALAB NAVBAR - FINAL POLISH
+   ===================================================== */
+
+.navbar {
+    width: 100%;
+    min-height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+
+    background: rgba(4, 20, 48, 0.97);
+
+    border-bottom: 1px solid rgba(0, 174, 255, 0.25);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: #f5fbff;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+}
+
+.navbar .logo:first-letter {
+    color: #ffd21f;
+}
+
+.navbar .logo:hover {
+    color: #19d9ff;
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.navbar .nav-menu {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+
+    margin-left: auto;
+}
+
+.navbar .nav-menu a {
+    position: relative;
+
+    padding: 24px 0;
+
+    color: #c8d8ed;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* HOVER */
+
+.navbar .nav-menu a:hover {
+    color: #16d9ff;
+}
+
+
+/* ACTIVE */
+
+.navbar .nav-menu a.active {
+    color: #16d9ff;
+}
+
+
+/* ACTIVE / HOVER LINE */
+
+.navbar .nav-menu a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 16px;
+
+    width: 0;
+    height: 2px;
+
+    background: #00d9ff;
+
+    border-radius: 5px;
+
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-menu a:hover::after,
+.navbar .nav-menu a.active::after {
+    width: 100%;
+}
+
+
+/* =========================
+   MOBILE BUTTON
+   ========================= */
+
+.navbar .menu-toggle {
+    display: none;
+
+    border: 1px solid rgba(0, 217, 255, 0.35);
+
+    background: rgba(0, 174, 255, 0.08);
+
+    color: #16d9ff;
+
+    font-size: 22px;
+
+    padding: 7px 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   NAVBAR RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        min-height: 65px;
+
+        padding: 0 20px;
+    }
+
+    .navbar .logo {
+        font-size: 21px;
+    }
+
+    .navbar .nav-menu {
+        display: none;
+
+        position: absolute;
+
+        top: 65px;
+        left: 0;
+
+        width: 100%;
+
+        margin: 0;
+
+        padding: 18px 25px;
+
+        background: #061a3d;
+
+        border-bottom: 1px solid rgba(0, 217, 255, 0.25);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 0;
+    }
+
+    .navbar .nav-menu.active {
+        display: flex;
+    }
+
+    .navbar .nav-menu a {
+        width: 100%;
+
+        padding: 13px 0;
+    }
+
+    .navbar .nav-menu a::after {
+        bottom: 7px;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+    }
+}
+
+
+/* =====================================================
+   KINEMALAB HOME - SECTION SPACING
+   ===================================================== */
+
+/* =========================
+   FEATURES
+   ========================= */
+
+.features {
+    padding: 75px 30px 70px;
+}
+
+
+/* =========================
+   MOTION TOPICS
+   ========================= */
+
+.categories {
+    padding: 75px 30px 70px;
+}
+
+
+/* =========================
+   SECTION TITLE
+   ========================= */
+
+.features .section-title,
+.categories .section-title {
+    margin-bottom: 38px;
+}
+
+
+/* =========================
+   FEATURE GRID
+   ========================= */
+
+.feature-grid {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    gap: 22px;
+}
+
+
+/* =========================
+   CATEGORY GRID
+   ========================= */
+
+.category-grid {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    gap: 15px;
+}
+
+
+/* =========================
+   CTA
+   ========================= */
+
+.cta {
+    margin-top: 10px;
+    margin-bottom: 65px;
+
+    max-width: 1100px;
+
+    padding: 48px 40px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
+
+/* =====================================================
+   KINEMALAB HERO - VISUAL POLISH
+   ===================================================== */
+
+.hero {
+    position: relative;
+
+    min-height: 650px;
+
+    background:
+        radial-gradient(
+            circle at 78% 45%,
+            rgba(0, 174, 255, 0.14),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 217, 255, 0.07),
+            transparent 30%
+        ),
+        #061b3f;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   HERO CONTENT
+   ========================= */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+
+    max-width: 850px;
+}
+
+
+/* =========================
+   HERO LABEL
+   ========================= */
+
+.hero-label {
+    display: inline-block;
+
+    padding: 8px 17px;
+
+    border: 1px solid #168cff;
+
+    border-radius: 30px;
+
+    background: rgba(0, 119, 255, 0.08);
+
+    color: #00d9ff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================
+   HERO TITLE
+   ========================= */
+
+.hero h1 {
+    margin-bottom: 22px;
+
+    color: #f5f8ff;
+
+    font-size: 68px;
+
+    font-weight: 900;
+
+    line-height: 0.98;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        0 0 25px rgba(0, 174, 255, 0.08);
+}
+
+
+/* CYAN WORD */
+
+.hero h1 span {
+    display: block;
+
+    color: #00d9ff;
+
+    text-shadow:
+        0 0 20px rgba(0, 217, 255, 0.20);
+}
+
+
+/* =========================
+   HERO DESCRIPTION
+   ========================= */
+
+.hero-description {
+    max-width: 650px;
+
+    color: #b9cce4;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   HERO BUTTONS
+   ========================= */
+
+.hero-buttons {
+    display: flex;
+
+    gap: 14px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   HERO VISUAL
+   ========================= */
+
+.hero-visual {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   PHYSICS SYMBOLS
+   ========================= */
+
+.physics-symbol {
+    color: #79ddff;
+
+    text-shadow:
+        0 0 12px rgba(0, 217, 255, 0.35);
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   ATOM / MAIN VISUAL
+   ========================= */
+
+.atom {
+    color: #ffd21f;
+
+    filter:
+        drop-shadow(0 0 10px rgba(255, 210, 31, 0.35))
+        drop-shadow(0 0 25px rgba(0, 174, 255, 0.25));
+}
+
+
+/* =========================
+   HERO GRID EFFECT
+   ========================= */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(61, 145, 255, 0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(61, 145, 255, 0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent 95%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   HERO GLOW
+   ========================= */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    right: 5%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0, 217, 255, 0.07),
+            transparent 65%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   MOBILE HERO
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: 600px;
+
+        padding: 70px 20px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+
+        letter-spacing: -1px;
+    }
+
+    .hero-label {
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-label {
+        padding: 7px 13px;
+    }
+}
+
+
+/* =====================================================
+   KINEMALAB - FEATURE & MOTION CARDS
+   ===================================================== */
+
+
+/* =========================
+   FEATURE SECTION
+   ========================= */
+
+.features {
+    background: #081f46;
+
+    border-top: 1px solid rgba(0, 174, 255, 0.08);
+    border-bottom: 1px solid rgba(0, 174, 255, 0.08);
+}
+
+
+/* =========================
+   SECTION LABEL
+   ========================= */
+
+.features .section-title p,
+.categories .section-title p {
+    color: #00d9ff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   SECTION TITLE
+   ========================= */
+
+.features .section-title h2,
+.categories .section-title h2 {
+    color: #f4f8ff;
+
+    font-size: 38px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   FEATURE CARDS
+   ========================= */
+
+.feature-card {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b2855,
+            #071d40
+        );
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(0, 140, 255, 0.45);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.20);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* CARD TOP LIGHT */
+
+.feature-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #00d9ff,
+            transparent
+        );
+
+    opacity: 0.5;
+}
+
+
+/* HOVER */
+
+.feature-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 15px 35px rgba(0, 174, 255, 0.15);
+}
+
+
+/* =========================
+   FEATURE ICON
+   ========================= */
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d5ca8,
+            #06356b
+        );
+
+    border: 1px solid rgba(0, 217, 255, 0.55);
+
+    border-radius: 13px;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 0 18px rgba(0, 174, 255, 0.12);
+}
+
+
+/* =========================
+   FEATURE TEXT
+   ========================= */
+
+.feature-card h3 {
+    color: #f4f8ff;
+
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #a9bdd6;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 18px;
+}
+
+.feature-card a {
+    color: #00d9ff;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.feature-card a:hover {
+    color: #ffffff;
+
+    padding-left: 4px;
+}
+
+
+/* =====================================================
+   MOTION TOPICS
+   ===================================================== */
+
+.categories {
+    background: #061a3a;
+
+    border-bottom: 1px solid rgba(0, 174, 255, 0.08);
+}
+
+
+/* =========================
+   CATEGORY CARD
+   ========================= */
+
+.category-card {
+    position: relative;
+
+    min-height: 190px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b2855,
+            #071d40
+        );
+
+    border: 1px solid rgba(0, 140, 255, 0.40);
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* CATEGORY GLOW */
+
+.category-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    right: -40px;
+    top: -40px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 217, 255, 0.08);
+
+    filter: blur(20px);
+
+    transition: 0.3s;
+}
+
+
+/* HOVER */
+
+.category-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 14px 30px rgba(0, 174, 255, 0.14);
+}
+
+.category-card:hover::after {
+    background:
+        rgba(0, 217, 255, 0.18);
+}
+
+
+/* =========================
+   CATEGORY ICON
+   ========================= */
+
+.category-card > span {
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   CATEGORY TITLE
+   ========================= */
+
+.category-card h3 {
+    color: #f4f8ff;
+
+    font-size: 18px;
+
+    margin-bottom: 7px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   CATEGORY DESCRIPTION
+   ========================= */
+
+.category-card p {
+    color: #9db4d0;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .features .section-title h2,
+    .categories .section-title h2 {
+        font-size: 30px;
+    }
+
+    .feature-card {
+        padding: 25px;
+    }
+
+    .category-card {
+        min-height: 170px;
+    }
+}
+
+
+/* =====================================================
+   KINEMALAB - CTA & FOOTER
+   ===================================================== */
+
+
+/* =========================
+   CALL TO ACTION
+   ========================= */
+
+.cta {
+    max-width: 1100px;
+
+    margin: 70px auto 80px;
+
+    padding: 55px 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b2f63,
+            #08234d
+        );
+
+    border: 1px solid #008fe0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* CYAN GLOW */
+
+.cta::before {
+    content: "";
+
+    position: absolute;
+
+    width: 220px;
+    height: 220px;
+
+    right: -80px;
+    top: -100px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0, 217, 255, 0.10);
+
+    filter: blur(25px);
+}
+
+
+/* CTA TEXT */
+
+.cta h2 {
+    color: #f4f8ff;
+
+    font-size: 30px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.cta p {
+    color: #a9c3df;
+
+    font-size: 15px;
+
+    margin: 0;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* CTA BUTTON */
+
+.cta .btn-primary {
+    flex-shrink: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #168cff,
+            #00d9ff
+        );
+
+    color: white;
+
+    border: none;
+
+    box-shadow:
+        0 8px 25px rgba(0, 174, 255, 0.25);
+
+    position: relative;
+
+    z-index: 2;
+}
+
+.cta .btn-primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 217, 255, 0.35);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    background:
+        linear-gradient(
+            180deg,
+            #04132e,
+            #020b1d
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 45px 20px 30px;
+
+    border-top: 1px solid rgba(0, 217, 255, 0.18);
+}
+
+
+/* FOOTER LOGO */
+
+.footer-logo {
+    color: #f4f8ff;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 10px;
+}
+
+
+/* LIGHTNING */
+
+.footer-logo:first-letter {
+    color: #ffd43b;
+}
+
+
+/* FOOTER TEXT */
+
+.footer p {
+    color: #7891ad;
+
+    font-size: 13px;
+
+    margin-bottom: 6px;
+}
+
+
+/* FOOTER DIVIDER */
+
+.footer hr {
+    max-width: 900px;
+
+    margin: 25px auto 15px;
+
+    border: none;
+
+    border-top:
+        1px solid rgba(120, 145, 173, 0.25);
+}
+
+
+/* FOOTER COPYRIGHT */
+
+.footer p:last-child {
+    color: #58718e;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE CTA
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .cta {
+        margin: 50px 20px 60px;
+
+        padding: 40px 25px;
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .cta h2 {
+        font-size: 26px;
+    }
+
+    .cta .btn-primary {
+        width: auto;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    .cta {
+        padding: 35px 20px;
+    }
+
+    .cta h2 {
+        font-size: 23px;
+    }
+
+    .cta .btn-primary {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .footer {
+        padding: 40px 15px 25px;
+    }
+
+}
+
+
+/* =====================================================
+   KINEMALAB - CALCULATOR UI
+   ===================================================== */
+
+
+/* =========================
+   CALCULATOR PAGE
+   ========================= */
+
+.calculator-section {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 55px 30px 80px;
+
+    background: #061a3a;
+}
+
+
+/* =========================
+   PAGE HEADER
+   ========================= */
+
+.page-header {
+    padding: 65px 20px 45px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #071d40,
+            #0a2855
+        );
+
+    border-bottom: 1px solid rgba(0, 217, 255, 0.12);
+
+    text-align: center;
+}
+
+.page-header p {
+    color: #00d9ff;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    color: #f4f8ff;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+.page-header span {
+    color: #a9c3df;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   TOPIC SELECTOR
+   ========================= */
+
+.calculator-topics {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    padding: 8px;
+
+    background: #071f43;
+
+    border: 1px solid rgba(0, 140, 255, 0.35);
+
+    border-radius: 14px;
+}
+
+
+/* TOPIC BUTTON */
+
+.topic-button {
+    padding: 11px 17px;
+
+    border: 1px solid rgba(0, 140, 255, 0.40);
+
+    border-radius: 9px;
+
+    background: #0a2855;
+
+    color: #a9c3df;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        0.25s ease;
+}
+
+.topic-button:hover {
+    color: #ffffff;
+
+    border-color: #00d9ff;
+
+    background: #0d376f;
+}
+
+
+/* ACTIVE TOPIC */
+
+.topic-button.active {
+    background:
+        linear-gradient(
+            135deg,
+            #168cff,
+            #00cfff
+        );
+
+    color: #ffffff;
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 6px 18px
+        rgba(0, 174, 255, 0.22);
+}
+
+
+/* =========================
+   CALCULATOR LAYOUT
+   ========================= */
+
+.calculator-layout {
+    display: grid;
+
+    grid-template-columns:
+        1.15fr
+        0.85fr;
+
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+
+/* =========================
+   CALCULATOR CARDS
+   ========================= */
+
+.calculator-card,
+.result-card {
+    background:
+        linear-gradient(
+            145deg,
+            #0b2855,
+            #071d40
+        );
+
+    border: 1px solid rgba(0, 140, 255, 0.42);
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.20);
+}
+
+
+/* CARD TOP ACCENT */
+
+.calculator-card::before,
+.result-card::before {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin-bottom: 22px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #168cff,
+            #00d9ff
+        );
+
+    border-radius: 10px;
+}
+
+
+/* =========================
+   TOPIC TITLE
+   ========================= */
+
+#topicTitle h2 {
+    color: #f4f8ff;
+
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+#topicTitle p {
+    color: #a9c3df;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   INPUT GROUP
+   ========================= */
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    color: #d9e9fa;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    background: #061a3a;
+
+    color: #f4f8ff;
+
+    border: 1px solid #24588b;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.input-group input::placeholder {
+    color: #6785a5;
+}
+
+.input-group input:focus {
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(0, 217, 255, 0.10);
+}
+
+
+/* =========================
+   CALCULATOR BUTTONS
+   ========================= */
+
+.calculator-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+.calculator-buttons .btn {
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   RESULT CARD
+   ========================= */
+
+.result-card h2 {
+    color: #f4f8ff;
+
+    font-size: 22px;
+
+    margin-bottom: 20px;
+}
+
+.result-main {
+    min-height: 145px;
+
+    padding: 20px;
+
+    background: #061a3a;
+
+    border: 1px solid rgba(0, 140, 255, 0.28);
+
+    border-radius: 12px;
+
+    color: #d9e9fa;
+
+    font-size: 15px;
+}
+
+.result-main h3 {
+    color: #00d9ff;
+
+    font-size: 19px;
+
+    margin-bottom: 12px;
+}
+
+.result-main strong {
+    color: #ffffff;
+}
+
+
+/* =========================
+   FORMULA BOX
+   ========================= */
+
+.formula-box {
+    margin-top: 20px;
+
+    padding: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 140, 255, 0.12),
+            rgba(0, 217, 255, 0.06)
+        );
+
+    border: 1px solid
+        rgba(0, 217, 255, 0.30);
+
+    border-radius: 12px;
+}
+
+.formula-box p {
+    color: #7899ba;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+.formula-box strong {
+    color: #00d9ff;
+
+    font-size: 16px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================
+   DATA TABLE
+   ========================= */
+
+.data-table-card,
+.graph-card {
+    margin-top: 30px;
+
+    padding: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b2855,
+            #071d40
+        );
+
+    border: 1px solid rgba(0, 140, 255, 0.40);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+.data-table-card h2,
+.graph-card h2 {
+    color: #f4f8ff;
+
+    font-size: 21px;
+
+    margin-bottom: 18px;
+}
+
+
+/* TABLE */
+
+.data-table-card table {
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #061a3a;
+}
+
+.data-table-card th {
+    background:
+        linear-gradient(
+            135deg,
+            #0b5ca8,
+            #087fc4
+        );
+
+    color: white;
+
+    padding: 13px;
+}
+
+.data-table-card td {
+    color: #c8d9eb;
+
+    padding: 11px;
+
+    border-bottom:
+        1px solid rgba(120, 160, 200, 0.15);
+}
+
+.data-table-card tr:nth-child(even) {
+    background: rgba(0, 140, 255, 0.035);
+}
+
+.data-table-card tr:hover {
+    background: rgba(0, 217, 255, 0.07);
+}
+
+
+/* =========================
+   GRAPH
+   ========================= */
+
+.graph-card {
+    overflow: hidden;
+}
+
+.graph-placeholder {
+    min-height: 350px;
+
+    padding: 10px;
+
+    background: #061a3a;
+
+    border: 1px solid
+        rgba(0, 140, 255, 0.28);
+
+    border-radius: 12px;
+}
+
+#physicsGraph {
+    max-width: 100%;
+
+    background: #061a3a;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 850px) {
+
+    .calculator-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .calculator-topics {
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .calculator-section {
+        padding:
+            40px 18px 60px;
+    }
+
+    .page-header {
+        padding:
+            50px 18px 35px;
+    }
+
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+    .calculator-card,
+    .result-card,
+    .data-table-card,
+    .graph-card {
+        padding: 22px;
+    }
+
+    .topic-button {
+        width: 100%;
+
+        text-align: left;
+    }
+
+    .calculator-buttons {
+        flex-direction: column;
+    }
+
+    .calculator-buttons .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .data-table-card {
+        overflow-x: auto;
+    }
+
+    .data-table-card table {
+        min-width: 550px;
+    }
+
+}
+
+
+/* ========================================
+   KINEMALAB - MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    .nav-container {
+        padding: 15px 20px;
+    }
+
+    .nav-menu {
+        background: #071d3d;
+        border-top: 1px solid #173968;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    .nav-menu a {
+        color: #d9efff;
+        width: 100%;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        color: #00d9ff;
+    }
+
+
+    /* =========================
+       PAGE HEADER
+    ========================= */
+
+    .page-header {
+        padding: 55px 20px 45px;
+    }
+
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+
+    /* =========================
+       CALCULATOR CONTAINER
+    ========================= */
+
+    .calculator-container {
+        padding: 30px 16px;
+    }
+
+
+    /* =========================
+       TOPIC BUTTONS
+    ========================= */
+
+    .calculator-topics {
+        padding: 15px;
+    }
+
+    .topic-button {
+        min-height: 44px;
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+
+    /* =========================
+       CALCULATOR LAYOUT
+    ========================= */
+
+    .calculator-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    /* =========================
+       INPUT + RESULT CARD
+    ========================= */
+
+    .calculator-card,
+    .result-card {
+        width: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+    }
+
+    .calculator-card h2,
+    .result-card h2 {
+        font-size: 24px;
+    }
+
+    .input-group input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .calculator-card button {
+        min-height: 44px;
+    }
+
+
+    /* =========================
+       TABLE
+    ========================= */
+
+    .data-table-card {
+        padding: 18px;
+        overflow-x: auto;
+    }
+
+    .data-table-card table {
+        min-width: 500px;
+    }
+
+
+    /* =========================
+       GRAPH
+    ========================= */
+
+    .graph-card {
+        padding: 18px;
+        overflow: hidden;
+    }
+
+    .graph-placeholder {
+        min-height: 280px;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    #physicsGraph {
+        min-width: 600px;
+        max-width: none;
+    }
+}
+
+
+/* ========================================
+   EXTRA SMALL SCREEN
+======================================== */
+
+@media (max-width: 480px) {
+
+    .calculator-container {
+        padding: 25px 12px;
+    }
+
+    .calculator-card,
+    .result-card {
+        padding: 20px;
+    }
+
+    .calculator-card h2,
+    .result-card h2 {
+        font-size: 21px;
+    }
+
+    .topic-button {
+        width: 100%;
+    }
+
+    .calculator-card button {
+        padding: 11px 18px;
+    }
+
+    .data-table-card {
+        padding: 14px;
+    }
+
+    .graph-card {
+        padding: 14px;
+    }
+
+}
+
+
+/* ========================================
+   KINEMALAB - SIMULATION
+======================================== */
+
+/* =========================
+   SIMULATION TOPICS
+========================= */
+
+.simulation-topics {
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 18px;
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    background: #071d3d;
+
+    border: 1px solid #174f86;
+    border-radius: 15px;
+
+    box-sizing: border-box;
+}
+
+.simulation-tab {
+    padding: 11px 18px;
+
+    background: #071d3d;
+
+    border: 1px solid #1b5d96;
+    border-radius: 10px;
+
+    color: #b9dcf5;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.simulation-tab:hover {
+    color: #ffffff;
+
+    border-color: #00d9ff;
+
+    background: #0b2b55;
+}
+
+.simulation-tab.active {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #168cff,
+        #00cfff
+    );
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 217, 255, 0.35);
+}
+
+
+/* =========================
+   SIMULATION LAYOUT
+========================= */
+
+.simulation-layout {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 0.8fr)
+        minmax(0, 1.5fr);
+
+    gap: 24px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   PARAMETERS
+========================= */
+
+.simulation-controls {
+
+    padding: 28px;
+
+    background: #0a2852;
+
+    border: 1px solid #1762a0;
+
+    border-radius: 18px;
+
+    box-sizing: border-box;
+}
+
+.simulation-controls::before {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 4px;
+
+    margin-bottom: 22px;
+
+    background: #00d9ff;
+
+    border-radius: 10px;
+}
+
+.simulation-controls h2 {
+
+    margin-bottom: 25px;
+
+    color: #ffffff;
+
+    font-size: 25px;
+}
+
+.simulation-controls label {
+
+    display: block;
+
+    margin-top: 18px;
+    margin-bottom: 8px;
+
+    color: #d9efff;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.simulation-controls .input-group {
+    margin-bottom: 5px;
+}
+
+.simulation-controls input {
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    box-sizing: border-box;
+
+    background: #071d3d;
+
+    border: 1px solid #24679c;
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.simulation-controls input:focus {
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(0, 217, 255, 0.12);
+}
+
+.simulation-controls .input-group span {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #9fdcff;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   SIMULATION BUTTONS
+========================= */
+
+.simulation-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+.simulation-buttons .btn {
+
+    min-height: 44px;
+
+    padding: 11px 20px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.simulation-buttons .btn-primary {
+
+    background: linear-gradient(
+        135deg,
+        #168cff,
+        #00cfff
+    );
+
+    border: none;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 15px
+        rgba(0, 217, 255, 0.25);
+}
+
+.simulation-buttons .btn-primary:hover {
+
+    box-shadow:
+        0 0 22px
+        rgba(0, 217, 255, 0.45);
+}
+
+.simulation-buttons .btn-reset {
+
+    background: #eef3f7;
+
+    border: none;
+
+    color: #12395b;
+}
+
+
+/* =========================
+   SIMULATION DISPLAY
+========================= */
+
+.simulation-display {
+
+    padding: 28px;
+
+    background: #0a2852;
+
+    border: 1px solid #1762a0;
+
+    border-radius: 18px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+
+.simulation-display h2 {
+
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-size: 25px;
+}
+
+#simulationCanvas {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: auto;
+
+    display: block;
+
+    margin: 0 auto;
+
+    background: #071d3d;
+
+    border: 1px solid #1762a0;
+
+    border-radius: 12px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   SIMULATION RESULT
+========================= */
+
+.simulation-result {
+
+    max-width: 1100px;
+
+    margin: 30px auto 0;
+
+    padding: 28px;
+
+    background: #0a2852;
+
+    border: 1px solid #1762a0;
+
+    border-radius: 18px;
+
+    box-sizing: border-box;
+}
+
+.simulation-result h2 {
+
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+.result-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.result-box {
+
+    padding: 20px;
+
+    background: #071d3d;
+
+    border: 1px solid #174f86;
+
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.result-box span {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #9fdcff;
+
+    font-size: 13px;
+}
+
+.result-box strong {
+
+    display: block;
+
+    color: #00d9ff;
+
+    font-size: 25px;
+}
+
+.result-box small {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #c9ecff;
+}
+
+
+/* =========================
+   SIMULATION RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .simulation-topics {
+
+        margin-left: 16px;
+        margin-right: 16px;
+
+        padding: 14px;
+    }
+
+    .simulation-tab {
+
+        flex: 1 1 auto;
+
+        min-height: 44px;
+
+        padding: 10px 13px;
+    }
+
+    .simulation-layout {
+
+        grid-template-columns: 1fr;
+
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .simulation-controls,
+    .simulation-display {
+
+        padding: 22px;
+    }
+
+    .simulation-result {
+
+        margin-left: 16px;
+        margin-right: 16px;
+
+        padding: 22px;
+    }
+
+    .result-grid {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .simulation-topics {
+
+        margin-left: 12px;
+        margin-right: 12px;
+
+        padding: 12px;
+
+        gap: 8px;
+    }
+
+    .simulation-tab {
+
+        width: 100%;
+    }
+
+    .simulation-layout {
+
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .simulation-controls,
+    .simulation-display {
+
+        padding: 18px;
+    }
+
+    .simulation-result {
+
+        margin-left: 12px;
+        margin-right: 12px;
+
+        padding: 18px;
+    }
+
+    .simulation-buttons {
+
+        flex-direction: column;
+    }
+
+    .simulation-buttons .btn {
+
+        width: 100%;
+    }
+}
+
+
+/* ========================================
+   KINEMALAB - NOTES FORMULA
+======================================== */
+
+.note-card .formula {
+    margin: 14px 0;
+    padding: 13px 16px;
+
+    background: #071d3d;
+    border: 1px solid #1762a0;
+    border-left: 4px solid #00d9ff;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 600;
+    text-align: center;
+
+    box-shadow:
+        0 4px 12px rgba(0, 20, 50, 0.18);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.note-card .formula:hover {
+    border-color: #00d9ff;
+    box-shadow:
+        0 0 14px rgba(0, 217, 255, 0.25);
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   KINEMALAB - ABOUT PAGE
+======================================== */
+
+.about-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px 60px;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   ABOUT CARD
+   ========================= */
+
+.about-card {
+    padding: 35px;
+
+    background: #0a2852;
+    border: 1px solid #1762a0;
+    border-radius: 18px;
+
+    box-sizing: border-box;
+
+    color: #d9efff;
+
+    box-shadow:
+        0 10px 30px rgba(0, 20, 50, 0.18);
+}
+
+.about-logo {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    background: #071d3d;
+    border: 1px solid #1762a0;
+    border-radius: 16px;
+
+    color: #00d9ff;
+    font-size: 30px;
+
+    box-shadow:
+        0 0 18px rgba(0, 217, 255, 0.18);
+}
+
+.about-card h2 {
+    margin-bottom: 18px;
+
+    color: #ffffff;
+    font-size: 30px;
+}
+
+.about-card p {
+    margin-bottom: 16px;
+
+    color: #b9dcf5;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   PROJECT INFO
+   ========================= */
+
+.project-info {
+    padding: 30px;
+
+    background: #071d3d;
+    border: 1px solid #1762a0;
+    border-radius: 18px;
+
+    box-sizing: border-box;
+}
+
+.project-info h2 {
+    margin-bottom: 22px;
+
+    color: #ffffff;
+    font-size: 24px;
+}
+
+.info-item {
+    padding: 17px 0;
+
+    border-bottom: 1px solid #174f86;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #79cfff;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.info-item strong {
+    display: block;
+
+    color: #d9efff;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   TEAM SECTION
+   ========================= */
+
+.team-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px 70px;
+
+    box-sizing: border-box;
+}
+
+.team-section > h2 {
+    margin-bottom: 25px;
+
+    color: #071d3d;
+    font-size: 28px;
+}
+
+
+/* =========================
+   TEAM GRID
+   ========================= */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.team-card {
+    padding: 28px 20px;
+
+    background: #0a2852;
+    border: 1px solid #1762a0;
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 8px 22px rgba(0, 217, 255, 0.18);
+}
+
+.team-card > div {
+    margin-bottom: 14px;
+
+    font-size: 38px;
+}
+
+.team-card h3 {
+    margin-bottom: 7px;
+
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.team-card p {
+    margin: 0;
+
+    color: #9fdcff;
+    font-size: 13px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    .about-section {
+        grid-template-columns: 1fr;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .about-card,
+    .project-info {
+        padding: 25px;
+    }
+
+    .team-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .team-section > h2 {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .about-section {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 45px;
+    }
+
+    .about-card,
+    .project-info {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    .about-logo {
+        width: 56px;
+        height: 56px;
+        font-size: 26px;
+    }
+
+    .about-card h2 {
+        font-size: 25px;
+    }
+
+    .about-card p {
+        font-size: 14px;
+    }
+
+    .project-info h2 {
+        font-size: 21px;
+    }
+
+    .team-section {
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-bottom: 50px;
+    }
+
+    .team-section > h2 {
+        font-size: 23px;
+    }
+
+    .team-card {
+        padding: 24px 18px;
+    }
+}

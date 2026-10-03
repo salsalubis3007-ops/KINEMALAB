@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>KINEMALAB - Motion Calculator</title>
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+        ⚡ <span>KINEMALAB</span>
+    </div>
+
+    <nav class="nav-menu">
+
+        <a href="index.html">Home</a>
+
+        <a href="calculator.html"
+           class="active">
+            Calculator
+        </a>
+
+        <a href="simulation.html">
+            Simulation
+        </a>
+
+        <a href="notes.html">
+            Notes
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </nav>
+
+    <button class="menu-toggle">
+        ☰
+    </button>
+
+</header>
+
+
+<main class="page-container">
+
+    <!-- HEADER -->
+
+   <section class="page-header">
+
+    <p>PHYSICS TOOLS</p>
+
+    <h1>Gerak Calculator</h1>
+
+    <span>
+        Pelajari dan hitung gerak benda
+        dengan kalkulator fisika interaktif.
+    </span>
+
+</section>
+
+
+    <!-- CALCULATOR -->
+
+    <section class="calculator-section">
+
+
+        <!-- TOPIC BUTTONS -->
+
+        <div class="calculator-topics">
+
+    <button
+        class="topic-button active"
+        onclick="selectTopic('glb')">
+        🚗 GLB
+    </button>
+
+    <button
+        class="topic-button"
+        onclick="selectTopic('glbb')">
+        🚀 GLBB
+    </button>
+
+    <button
+        class="topic-button"
+        onclick="selectTopic('vertikal')">
+        ⬆️ Gerak Vertikal
+    </button>
+
+    <button
+        class="topic-button"
+        onclick="selectTopic('jatuhbebas')">
+        ⬇️ Jatuh Bebas
+    </button>
+
+    <button
+        class="topic-button"
+        onclick="selectTopic('parabola')">
+        🏀 Gerak Parabola
+    </button>
+
+</div>
+        <!-- CALCULATOR AREA -->
+
+        <div class="calculator-layout">
+
+
+            <!-- INPUT CARD -->
+
+            <div class="calculator-card">
+
+<div id="topicTitle">
+
+    <h2 id="topicName">
+        🚗 Gerak Lurus Beraturan
+    </h2>
+
+    <p id="topicDescription">
+        Hitung jarak benda berdasarkan
+        kecepatan dan waktu.
+    </p>
+
+</div>
+
+                <!-- INPUT AREA -->
+
+<div id="inputArea">
+
+    <div class="input-group">
+
+        <label>
+            Kecepatan (v) m/s
+        </label>
+
+        <input
+            type="number"
+            id="inputV"
+            placeholder="Contoh: 10">
+
+    </div>
+
+
+    <div class="input-group">
+
+        <label>
+            Waktu (t) sekon
+        </label>
+
+        <input
+            type="number"
+            id="inputT"
+            placeholder="Contoh: 5">
+
+    </div>
+
+</div>
+
+                <!-- BUTTON -->
+
+                <div class="calculator-buttons">
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="calculate()">
+
+                        Calculate
+
+                    </button>
+
+
+                    <button
+                        class="btn btn-reset"
+                        onclick="resetCalculator()">
+
+                        Reset
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESULT CARD -->
+
+            <div class="result-card">
+
+                <h2>
+                    📊 Result
+                </h2>
+
+
+                <div
+                    id="result"
+                    class="result-main">
+
+                    Silakan masukkan nilai
+                    kemudian tekan tombol Hitung.
+
+                </div>
+
+
+                <div class="formula-box">
+
+                    <p>
+                        Formula
+                    </p>
+
+                    <strong id="formula">
+
+                      s = v × t
+
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- TABLE -->
+
+        <div class="data-table-card">
+
+            <h2>
+                📋 Calculation Data
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Time</th>
+
+                        <th>Velocity</th>
+
+                        <th>Position</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="tableBody">
+
+                    <tr>
+
+                        <td colspan="3">
+                            Belum ada data.
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- GRAPH -->
+
+        <div class="graph-card">
+
+            <h2>
+                📈 Graph
+            </h2>
+
+            <div
+                id="graphContainer"
+                class="graph-placeholder">
+
+                Grafik akan muncul
+                setelah perhitungan.
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        ⚡ KINEMALAB
+    </div>
+
+    <p>Explore Motion. Calculate. Simulate.</p>
+
+    <span>© 2026 KINEMALAB</span>
+</footer>
+
+<script src="js/calculator.js"></script>
+
+</body>
+
+</html>

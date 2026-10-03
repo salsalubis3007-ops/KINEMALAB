@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Physics Simulation - PHYSIM
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        ⚡ <span>KINEMALAB</span>
+    </div>
+
+    <button
+        class="menu-toggle"
+        onclick="toggleMenu()"
+        aria-label="Buka menu">
+        ☰
+    </button>
+
+    <nav class="nav-menu">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="calculator.html">
+            Calculator
+        </a>
+
+        <a href="simulation.html"
+           class="active">
+            Simulation
+        </a>
+
+        <a href="notes.html">
+            Notes
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="page-container">
+
+
+<section class="page-header">
+
+    <p>
+        INTERACTIVE MOTION
+    </p>
+
+    <h1>
+        Gerak Simulation
+    </h1>
+
+    <span>
+        Visualisasikan konsep gerak
+        melalui simulasi interaktif.
+    </span>
+
+</section>
+
+
+<!-- SIMULATION SELECTOR -->
+
+<section class="simulation-topics">
+
+    <button
+        class="simulation-tab"
+        onclick="selectSimulation('glb', this)">
+        🚗 GLB
+    </button>
+
+    <button
+        class="simulation-tab"
+        onclick="selectSimulation('glbb', this)">
+        🚀 GLBB
+    </button>
+
+    <button
+        class="simulation-tab"
+        onclick="selectSimulation('vertikal', this)">
+        ⬆️ Gerak Vertikal
+    </button>
+
+    <button
+        class="simulation-tab"
+        onclick="selectSimulation('jatuhbebas', this)">
+        ⬇️ Jatuh Bebas
+    </button>
+
+    <button
+        class="simulation-tab active"
+        onclick="selectSimulation('parabola', this)">
+        🏀 Gerak Parabola
+    </button>
+
+</section>
+
+<!-- SIMULATION AREA -->
+
+<section class="simulation-layout">
+
+
+    <!-- PARAMETERS -->
+
+    <div class="simulation-controls">
+
+        <h2>
+            Parameters
+        </h2>
+
+
+        <label>
+            Kecepatan Awal
+        </label>
+
+        <div class="input-group">
+
+            <input
+                type="number"
+                id="initialVelocity"
+                value="20">
+
+            <span>
+                m/s
+            </span>
+
+        </div>
+
+
+        <label>
+            Sudut
+        </label>
+
+        <div class="input-group">
+
+            <input
+                type="number"
+                id="angle"
+                value="45">
+
+            <span>
+                °
+            </span>
+
+        </div>
+
+
+        <label>
+            Gravitasi
+        </label>
+
+        <div class="input-group">
+
+            <input
+                type="number"
+                id="gravity"
+                value="9.8">
+
+            <span>
+                m/s²
+            </span>
+
+        </div>
+
+
+        <div class="simulation-buttons">
+
+            <button
+                class="btn btn-primary"
+                id="startSimulation">
+
+                ▶ Start
+
+            </button>
+
+
+            <button
+                class="btn btn-reset"
+                id="resetSimulation">
+
+                ↻ Reset
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- CANVAS -->
+
+    <div class="simulation-display">
+
+        <h2>
+            Projectile Motion
+        </h2>
+
+
+        <canvas
+            id="simulationCanvas"
+            width="700"
+            height="400">
+
+        </canvas>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- SIMULATION RESULT -->
+
+<section class="simulation-result">
+
+    <h2>📊 Simulation Result</h2>
+
+    <div class="result-grid">
+
+        <div class="result-box">
+
+            <span id="resultLabel1">
+                Hasil 1
+            </span>
+
+            <strong id="resultValue1">
+                —
+            </strong>
+
+            <small id="resultUnit1">
+                —
+            </small>
+
+        </div>
+
+
+        <div class="result-box">
+
+            <span id="resultLabel2">
+                Hasil 2
+            </span>
+
+            <strong id="resultValue2">
+                —
+            </strong>
+
+            <small id="resultUnit2">
+                —
+            </small>
+
+        </div>
+
+
+        <div class="result-box">
+
+            <span id="resultLabel3">
+                Hasil 3
+            </span>
+
+            <strong id="resultValue3">
+                —
+            </strong>
+
+            <small id="resultUnit3">
+                —
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        ⚡ KINEMALAB
+    </div>
+
+    <p>
+        Explore Motion. Calculate. Simulate.
+    </p>
+
+    <p>
+        © 2026 KINEMALAB
+    </p>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+<script src="js/simulation.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+<title>
+    KINEMALAB - Motion Notes
+</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        ⚡ <span>KINEMALAB</span>
+    </div>
+
+    <button
+        class="menu-toggle"
+        onclick="toggleMenu()"
+        aria-label="Buka menu">
+        ☰
+    </button>
+
+    <nav class="nav-menu">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="calculator.html">
+            Calculator
+        </a>
+
+        <a href="simulation.html">
+            Simulation
+        </a>
+
+        <a href="notes.html"
+           class="active">
+            Notes
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<main class="page-container">
+
+
+<section class="page-header">
+
+    <p>
+        MOTION KNOWLEDGE
+    </p>
+
+    <h1>
+        Gerak Notes
+    </h1>
+
+    <span>
+        Pelajari konsep dan rumus dasar gerak
+        secara ringkas dan mudah dipahami.
+    </span>
+
+</section>
+
+
+<section class="notes-grid">
+
+
+    <!-- GLB -->
+
+    <article class="note-card">
+
+        <div class="note-icon">
+            🚗
+        </div>
+
+        <h2>
+            Gerak Lurus Beraturan
+        </h2>
+
+        <p>
+            GLB adalah gerak benda pada lintasan
+            lurus dengan kecepatan tetap dan
+            percepatan nol.
+        </p>
+
+        <div class="formula">
+            s = v × t
+        </div>
+
+        <div class="formula">
+            v = s / t
+        </div>
+
+        <p>
+            Keterangan:
+            <br>
+            s = posisi/perpindahan (m)
+            <br>
+            v = kecepatan (m/s)
+            <br>
+            t = waktu (s)
+        </p>
+
+    </article>
+
+
+
+    <!-- GLBB -->
+
+    <article class="note-card">
+
+        <div class="note-icon">
+            🏎️
+        </div>
+
+        <h2>
+            Gerak Lurus Berubah Beraturan
+        </h2>
+
+        <p>
+            GLBB adalah gerak pada lintasan lurus
+            dengan percepatan yang tetap.
+        </p>
+
+        <div class="formula">
+            v = v₀ + at
+        </div>
+
+        <div class="formula">
+            s = v₀t + ½at²
+        </div>
+
+        <div class="formula">
+            v² = v₀² + 2as
+        </div>
+
+        <p>
+            Keterangan:
+            <br>
+            v₀ = kecepatan awal (m/s)
+            <br>
+            v = kecepatan akhir (m/s)
+            <br>
+            a = percepatan (m/s²)
+            <br>
+            s = perpindahan (m)
+            <br>
+            t = waktu (s)
+        </p>
+
+    </article>
+
+
+
+    <!-- GERAK VERTIKAL -->
+
+    <article class="note-card">
+
+        <div class="note-icon">
+            ⬆️
+        </div>
+
+        <h2>
+            Gerak Vertikal
+        </h2>
+
+        <p>
+            Gerak vertikal adalah gerak benda
+            pada arah tegak lurus terhadap permukaan
+            bumi yang dipengaruhi gravitasi.
+        </p>
+
+        <div class="formula">
+            v = v₀ - gt
+        </div>
+
+        <div class="formula">
+            h = v₀t - ½gt²
+        </div>
+
+        <div class="formula">
+            v² = v₀² - 2gh
+        </div>
+
+        <p>
+            Keterangan:
+            <br>
+            v₀ = kecepatan awal (m/s)
+            <br>
+            v = kecepatan (m/s)
+            <br>
+            g = gravitasi (m/s²)
+            <br>
+            h = ketinggian (m)
+            <br>
+            t = waktu (s)
+        </p>
+
+    </article>
+
+
+
+    <!-- JATUH BEBAS -->
+
+    <article class="note-card">
+
+        <div class="note-icon">
+            🍎
+        </div>
+
+        <h2>
+            Jatuh Bebas
+        </h2>
+
+        <p>
+            Jatuh bebas adalah gerak benda yang
+            dijatuhkan dari suatu ketinggian tanpa
+            kecepatan awal dan hanya dipengaruhi
+            oleh gravitasi.
+        </p>
+
+        <div class="formula">
+            h = ½gt²
+        </div>
+
+        <div class="formula">
+            v = gt
+        </div>
+
+        <div class="formula">
+            v² = 2gh
+        </div>
+
+        <p>
+            Keterangan:
+            <br>
+            h = ketinggian (m)
+            <br>
+            g = gravitasi (m/s²)
+            <br>
+            t = waktu (s)
+            <br>
+            v = kecepatan (m/s)
+        </p>
+
+    </article>
+
+
+
+    <!-- GERAK PARABOLA -->
+
+    <article class="note-card">
+
+        <div class="note-icon">
+            🏀
+        </div>
+
+        <h2>
+            Gerak Parabola
+        </h2>
+
+        <p>
+            Gerak parabola merupakan gabungan gerak
+            horizontal beraturan dan gerak vertikal
+            yang dipengaruhi gravitasi.
+        </p>
+
+        <div class="formula">
+            x = v₀ cos θ × t
+        </div>
+
+        <div class="formula">
+            y = v₀ sin θ × t − ½gt²
+        </div>
+
+        <div class="formula">
+            R = v₀² sin(2θ) / g
+        </div>
+
+        <p>
+            Keterangan:
+            <br>
+            v₀ = kecepatan awal (m/s)
+            <br>
+            θ = sudut elevasi
+            <br>
+            g = gravitasi (m/s²)
+            <br>
+            x = posisi horizontal (m)
+            <br>
+            y = posisi vertikal (m)
+        </p>
+
+    </article>
+
+
+</section>
+
+
+</main>
+
+
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        ⚡ KINEMALAB
+    </div>
+
+    <p>
+        Explore Motion. Calculate. Simulate.
+    </p>
+
+    <p>
+        © 2026 KINEMALAB
+    </p>
+
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
